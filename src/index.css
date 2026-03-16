@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+  /* Xiao Nuan - Warm Care AI palette */
+  --bg-color: #0a0a14;
+  /* Very dark navy/black */
+
+  --blob-1: #5B3B8A;
+  /* Deep purple */
+  --blob-2: #E05A8A;
+  /* Warm pink/coral */
+  --blob-3: #FF8C42;
+  /* Warm orange accent */
+
+  --text-main: #ffffff;
+  --text-muted: #a8a8c0;
+
+  --accent: #E05A8A;
+  --accent-2: #FF8C42;
+  --accent-3: #7C5CBF;
+
+  /* Glassmorphism variables for dark theme */
+  --glass-bg: rgba(20, 18, 35, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(224, 90, 138, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Glassmorphism Container */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 32px;
+}
+
+/* Breathing Glow Animation */
+@keyframes breathing-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(224, 90, 138, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(224, 90, 138, 0.55);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(224, 90, 138, 0.2);
+  }
+}
+
+.breathing-glow {
+  animation: breathing-glow 4.4s infinite ease-in-out;
+}
+
+/* Number counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Fluid Animation Background */
+.fluid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  filter: url(#goo);
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.7;
+}
+
+.blob-1 {
+  background-color: var(--blob-1);
+  width: 45vw;
+  height: 45vw;
+}
+
+.blob-2 {
+  background-color: var(--blob-2);
+  width: 55vw;
+  height: 55vw;
+}
+
+.blob-3 {
+  background-color: var(--blob-3);
+  width: 50vw;
+  height: 50vw;
+}
+
+/* Accent gradient text */
+.accent-text {
+  background: linear-gradient(135deg, #E05A8A, #FF8C42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Warm accent card */
+.warm-card {
+  background: rgba(224, 90, 138, 0.08);
+  border: 1px solid rgba(224, 90, 138, 0.2);
+  border-radius: 16px;
+}
+
+/* Section number badge */
+.slide-number {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
