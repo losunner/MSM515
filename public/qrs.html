@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSM515 二维码</title>
+    <style>
+      body{font-family: -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif; margin:24px; background:#fff; color:#111;}
+      h1{font-size:20px; margin:0 0 16px;}
+      .grid{display:grid; grid-template-columns:repeat(2, minmax(240px, 1fr)); gap:24px; max-width: 980px;}
+      .card{border:1px solid #e6e6e6; border-radius:12px; padding:16px;}
+      .label{font-weight:700; margin:0 0 10px;}
+      img{width:100%; max-width:420px; height:auto; display:block;}
+      .url{margin-top:10px; font-size:12px; word-break:break-all; color:#444;}
+    </style>
+  </head>
+  <body>
+    <h1>MSM515 4 个链接二维码（颜色区分）</h1>
+
+    <div class="grid">
+      <div class="card">
+        <div class="label">动画PPT（蓝）</div>
+        <img src="/MSM515/qrs/ppt.png" alt="动画PPT QR" />
+        <div class="url">https://losunner.github.io/MSM515/</div>
+      </div>
+
+      <div class="card">
+        <div class="label">视频1（红）</div>
+        <img src="/MSM515/qrs/video1.png" alt="视频1 QR" />
+        <div class="url">https://youtu.be/ji88UWLaaXw</div>
+      </div>
+
+      <div class="card">
+        <div class="label">视频2（绿）</div>
+        <img src="/MSM515/qrs/video2.png" alt="视频2 QR" />
+        <div class="url">https://youtu.be/rw0VtonuJR0</div>
+      </div>
+
+      <div class="card">
+        <div class="label">附加内容（紫）</div>
+        <img src="/MSM515/qrs/drive.png" alt="附加内容 QR" />
+        <div class="url">https://drive.google.com/drive/folders/1oxJsGTGu4GjEs8bDRflfEDrzDMmjq85d?usp=sharing</div>
+      </div>
+    </div>
+  </body>
+</html>
